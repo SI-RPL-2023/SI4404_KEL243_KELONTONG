@@ -41,4 +41,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function komentar()
+    {
+        return $this->hasMany('App\Komentar','id_usr','id');
+    }
+
 }
