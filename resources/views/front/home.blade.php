@@ -9,7 +9,7 @@
 <!-- Card -->
 <p class="h1 fw-semibold text-center mt-5">List Kelontong</p>
 <div class="row">
-    <div class="col-md-4 mt-5">
+    <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/1.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 mt-5">
+    <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/2.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 mt-5">
+    <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/3.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -45,7 +45,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 mt-5">
+    <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/4.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -57,7 +57,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 mt-5">
+    <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/5.png" class="card-img-top" alt="...">
             <div class="card-body">
@@ -69,7 +69,7 @@
             </div>
         </div>
     </div>
-    <div class="col-md-4 mt-5">
+    <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/6.png" class="card-img-top" alt="...">
             <div class="card-body">

@@ -28,6 +28,22 @@
     <!-- Navbar -->
     @include('front.includes.navbar')
 
+    <!-- Home -->
+    <div class="home mb-5">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{ asset('frontend/home/home.png') }}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block mb-5">
+              <button class="btn btn-light fw-semibold" type="submit">Register</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+
     <!-- Carousel -->
     @include('front.includes.carousel')
 
