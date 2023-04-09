@@ -50,11 +50,11 @@
                             <label class="form-check-label" for="remember">Remember me</label>
                         </div> -->
                         <!-- Login Button -->
-                        <button type="submit" class="btn btn-primary px-4 mt-2">Login</button>
+                        <button type="submit" class="btn btn-dark px-4 mt-2" style="background-color: #CD8C3F;">Login</button>
 
                     </form>
                     <!-- Link ke register page -->
-                    <p class="mt-3">Anda belum punya akun? <a href="/abidzar_daftar">Register</a></p>
+                    <p class="mt-3">Anda belum memiliki akun? <a href="/abidzar_daftar">Register</a></p>
                 </div>
             </div>
         </div>
