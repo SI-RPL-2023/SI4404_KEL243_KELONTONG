@@ -4,10 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class RegisterController extends Controller
 {
-    public function index(){
+    public function create(){
         return view('front.layouts.register');
     }
 
@@ -16,7 +17,7 @@ class RegisterController extends Controller
         $user->email = $request->email;
         $user->name = $request->name;
         $user->nohp = $request->no_hp;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         $user->plan_status = 'free';
         $user->user_status = 'user';
         $user->foto = '';

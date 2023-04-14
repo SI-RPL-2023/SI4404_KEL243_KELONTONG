@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,5 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register',[RegisterController::class, 'store']);
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/register', [RegisterController::class, 'create'])->name('register');
+    Route::post('/register',[RegisterController::class, 'store'])->name('register');
+});
+
