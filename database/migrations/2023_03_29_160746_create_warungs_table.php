@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_wrg');
             $table->string('verif_status')->default('pending');
+            $table->string('foto');
             $table->string('nohp');
             $table->string('kategori');
             $table->string('lokasi');
