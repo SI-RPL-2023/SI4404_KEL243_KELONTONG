@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Andi Wijaya',
             'email' => 'andi.wijaya@gmail.com',
-            'password' => '12345678',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'seeker',
             'foto' => 'andi_wijaya.jpg',
@@ -27,7 +27,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Budi Santoso',
             'email' => 'budi.santoso@yahoo.com',
-            'password' => '23456789',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'user',
             'foto' => 'budi_santoso.jpg',
@@ -38,7 +38,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Cinta Ayu',
             'email' => 'cinta.ayu@hotmail.com',
-            'password' => '34567890',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'user',
             'foto' => 'cinta_ayu.jpg',
@@ -49,7 +49,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Dwi Utami',
             'email' => 'dwi.utami@gmail.com',
-            'password' => '45678901',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'seeker',
             'foto' => 'dwi_utami.jpg',
@@ -60,7 +60,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Eka Putra',
             'email' => 'eka.putra@yahoo.com',
-            'password' => '56789012',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'user',
             'foto' => 'eka_putra.jpg',
@@ -71,7 +71,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Fajar Pratama',
             'email' => 'fajar.pratama@hotmail.com',
-            'password' => '67890123',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'user',
             'foto' => 'fajar_pratama.jpg',
@@ -82,7 +82,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Gita Dewi',
             'email' => 'gita.dewi@gmail.com',
-            'password' => '78901234',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'seeker',
             'foto' => 'gita_dewi.jpg',
@@ -93,7 +93,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Hana Sari',
             'email' => 'hana.sari@yahoo.com',
-            'password' => '89012345',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'user',
             'foto' => 'hana_sari.jpg',
@@ -104,7 +104,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Indra Kusuma',
         'email' => 'indra.kusuma@hotmail.com',
-        'password' => '90123456',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
         'foto' => 'indra_kusuma.jpg',
@@ -115,7 +115,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Joko Hartono',
         'email' => 'joko.hartono@gmail.com',
-        'password' => '01234567',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
         'foto' => 'joko_hartono.jpg',
@@ -126,7 +126,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Kurnia Wati',
         'email' => 'kurnia.wati@yahoo.com',
-        'password' => '12345678',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
         'foto' => 'kurnia_wati.jpg',
@@ -137,7 +137,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Lestari Putri',
         'email' => 'lestari.putri@hotmail.com',
-        'password' => '23456789',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
         'foto' => 'lestari_putri.jpg',
@@ -148,7 +148,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Mulyono Susanto',
         'email' => 'mulyono.susanto@gmail.com',
-        'password' => '34567890',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
         'foto' => 'mulyono_susanto.jpg',
@@ -159,7 +159,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Nia Rahmawati',
         'email' => 'nia.rahmawati@yahoo.com',
-        'password' => '45678901',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'user',
         'foto' => 'nia_rahmawati.jpg',
@@ -170,7 +170,7 @@ class UserSeeder extends Seeder
         User::insert([
             'name' => 'Oka Prasetya',
             'email' => 'oka.prasetya@hotmail.com',
-            'password' => '56789012',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'seeker',
             'foto' => 'oka_prasetya.jpg',
@@ -181,7 +181,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Putri Aisyah',
         'email' => 'putri.aisyah@gmail.com',
-        'password' => '67890123',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'user',
         'foto' => 'putri_aisyah.jpg',
@@ -192,7 +192,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Rizki Permana',
         'email' => 'rizki.permana@yahoo.com',
-        'password' => '78901234',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
         'foto' => 'rizki_permana.jpg',
@@ -203,7 +203,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Siti Nurhaliza',
         'email' => 'siti.nurhaliza@hotmail.com',
-        'password' => '89012345',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
         'foto' => 'siti_nurhaliza.jpg',
@@ -214,7 +214,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Teguh Purnomo',
         'email' => 'teguh.purnomo@gmail.com',
-        'password' => '90123456',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
         'foto' => 'teguh_purnomo.jpg',
@@ -225,7 +225,7 @@ class UserSeeder extends Seeder
         User::insert([
         'name' => 'Umi Kalsum',
         'email' => 'umi.kalsum@yahoo.com',
-        'password' => '01234567',
+        'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
         'foto' => 'umi_kalsum.jpg',
