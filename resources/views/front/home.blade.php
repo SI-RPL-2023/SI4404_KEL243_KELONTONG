@@ -8,78 +8,20 @@
 </div>
 <!-- Card -->
 <p class="h1 fw-semibold text-center mt-5">List Kelontong</p>
+@foreach ($warungs as $warung)
 <div class="row">
     <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/1.png" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Warung Podomoro</h5>
-                <p class="card-text">Bang Irpan</p>
+                <h5 class="card-title">{{$warung['nama_wrg']}}</h5>
+                <p class="card-text">{{$warung['jam_buka']}}</p>
             </div>
             <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">Detail Toko</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-5 mb-5">
-        <div class="card">
-            <img src="frontend/card/2.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Warung Nasi Raos</h5>
-                <p class="card-text">Ibu Riris</p>
-            </div>
-            <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">Detail Toko</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-5 mb-5">
-        <div class="card">
-            <img src="frontend/card/3.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Ayam Kremes Sambar Mangga</h5>
-                <p class="card-text">Bang Ghofar</p>
-            </div>
-            <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">Detail Toko</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-5 mb-5">
-        <div class="card">
-            <img src="frontend/card/4.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">RM. Sang Palito</h5>
-                <p class="card-text">Pak Pali</p>
-            </div>
-            <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">Detail Toko</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-5 mb-5">
-        <div class="card">
-            <img src="frontend/card/5.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Warkop Pandita</h5>
-                <p class="card-text">Kang Dadang</p>
-            </div>
-            <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">Detail Toko</button>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-4 mt-5 mb-5">
-        <div class="card">
-            <img src="frontend/card/6.png" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Ayam Baghdat</h5>
-                <p class="card-text">Bang Dhik</p>
-            </div>
-            <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">Detail Toko</button>
+                <button class="btn btn-dark">{{$warung['detail']}}</button>
             </div>
         </div>
     </div>
 </div>
+@endforeach
 @endsection
