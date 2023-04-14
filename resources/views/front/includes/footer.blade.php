@@ -3,6 +3,7 @@
             <div class="row">
                 <div class="col-md-4">
                     Our Contact :
+                    
                 </div>
                 <div class="col-md-4">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae porro ratione magnam optio temporibus quaerat, culpa harum, earum minima, quo alias at.
