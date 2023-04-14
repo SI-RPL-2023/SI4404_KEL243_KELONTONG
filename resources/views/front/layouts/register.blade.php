@@ -31,7 +31,7 @@
                 <div class="m-auto" style="width: 90%">
                     <h2 class="fw-bold mb-4">Register</h2>
                     <!-- Form -->
-                    <form action="/abidzar_login" method="post">
+                    <form action="/register" method="post">
 
                         @csrf
                         <!-- Email -->

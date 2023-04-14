@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [RegisterController::class, 'index']);
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register',[RegisterController::class, 'store']);
