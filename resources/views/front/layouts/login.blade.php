@@ -31,8 +31,7 @@
                 <div class="m-auto" style="width: 90%">
                     <h2 class="fw-bold mb-4">Login</h2>
                     <!-- Form -->
-                    <form action="/abidzar_login" method="post">
-
+                    <form action="{{ route('login')}}" method="post">
                         @csrf
                         <!-- Email -->
                         <div class="mb-3 position-relative">
@@ -54,7 +53,7 @@
 
                     </form>
                     <!-- Link ke register page -->
-                    <p class="mt-3">Anda belum memiliki akun? <a href="/abidzar_daftar">Register</a></p>
+                    <p class="mt-3">Anda belum memiliki akun? <a href="/register">Register</a></p>
                 </div>
             </div>
         </div>

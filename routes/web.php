@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogoutController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,4 +22,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [LoginController::class, 'index']);
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/login', [LoginController::class, 'create'])->name('login');
+    Route::post('/login', [LoginController::class, 'store'])->name('login');
+});
+
+Route::group(['middleware' => 'auth'], function () {
+    Route::match(['get', 'delete'],'/logout', [LogoutController::class, 'destroy'])->name('logout');
+});
