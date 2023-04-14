@@ -8,8 +8,8 @@
 </div>
 <!-- Card -->
 <p class="h1 fw-semibold text-center mt-5">List Kelontong</p>
-@foreach ($warungs as $warung)
 <div class="row">
+    @foreach ($warungs as $warung)
     <div class="col-md-4 mt-5 mb-5">
         <div class="card">
             <img src="frontend/card/1.png" class="card-img-top" alt="...">
@@ -17,11 +17,13 @@
                 <h5 class="card-title">{{$warung['nama_wrg']}}</h5>
                 <p class="card-text">{{$warung['jam_buka']}}</p>
             </div>
+            <form action="{{route('login')}}" method="get">
             <div class="mb-5 d-flex justify-content-around">
-                <button class="btn btn-dark">{{$warung['detail']}}</button>
+                <button class="btn btn-dark">Detail Toko</button>
             </div>
+        </form>
         </div>
     </div>
+    @endforeach
 </div>
-@endforeach
 @endsection

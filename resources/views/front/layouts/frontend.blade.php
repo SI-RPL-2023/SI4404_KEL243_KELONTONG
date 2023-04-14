@@ -34,9 +34,11 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="{{ asset('frontend/home/home.png') }}" class="d-block w-100" alt="...">
+            <form method="GET" action="{{route('register')}}">
             <div class="carousel-caption d-none d-md-block mb-5">
               <button class="btn btn-light fw-semibold" type="submit">Register</button>
             </div>
+          </form>
           </div>
         </div>
       </div>
