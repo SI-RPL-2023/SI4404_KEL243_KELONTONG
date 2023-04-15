@@ -21,5 +21,5 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/', [FrontendController::class, 'index'])->name('onboarding');
+    Route::get('/', [FrontendController::class, 'index'])->name('frontHome');
 });

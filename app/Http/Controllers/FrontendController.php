@@ -9,6 +9,6 @@ class FrontendController extends Controller
 {
     public function index(){
         $warungs = Warung::all();
-        return view ('front.home', ['warungs' => $warungs]);
+        return view ('frontHome.home', ['warungs' => $warungs]);
     }
 }

@@ -26,18 +26,15 @@
   
   <body>
     <!-- Navbar -->
-    @include('front.includes.navbar')
+    @include('frontHome.includes.navbar')
 
-    <!-- Home -->
+    <!-- Front Home -->
     <div class="home mb-5">
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="{{ asset('frontend/home/home.png') }}" class="d-block w-100" alt="...">
             <form method="GET" action="{{route('register')}}">
-            <div class="carousel-caption d-none d-md-block mb-5">
-              <button class="btn btn-light fw-semibold" type="submit">Register</button>
-            </div>
           </form>
           </div>
         </div>
@@ -47,7 +44,7 @@
     
 
     <!-- Carousel -->
-    @include('front.includes.carousel')
+    @include('frontHome.includes.carousel')
 
     <!-- Content -->
     <div class="container">
@@ -56,10 +53,10 @@
     </div>
 
     <!-- Footer -->
-    @include('front.includes.footer')
+    @include('frontHome.includes.footer')
 
     <!-- Js $ Bootstrap -->
-    @include('front.includes.js')
+    @include('frontHome.includes.js')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>

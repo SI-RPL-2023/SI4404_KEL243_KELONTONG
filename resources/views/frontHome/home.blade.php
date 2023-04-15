@@ -1,4 +1,4 @@
-@extends('front.layouts.frontend')
+@extends('frontHome.layouts.frontend')
 
 @section('content')
 <!-- About Us -->
