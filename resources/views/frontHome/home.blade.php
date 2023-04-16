@@ -12,10 +12,10 @@
     @foreach ($warungs as $warung)
     <div class="col-md-4 mt-5 mb-5">
         <div class="card">
-            <img src="frontend/card/1.png" class="card-img-top" alt="...">
+            <img src="images/warungs/{{$warung['foto']}}.png" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{$warung['nama_wrg']}}</h5>
-                <p class="card-text">{{$warung['jam_buka']}}</p>
+                <p class="card-text">{{$warung['pemilik']}}</p>
             </div>
             <form action="{{route('login')}}" method="get">
             <div class="mb-5 d-flex justify-content-around">
