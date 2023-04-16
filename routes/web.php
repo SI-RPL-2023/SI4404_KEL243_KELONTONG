@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Auth::routes();
+
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/home', [FrontendController::class, 'index'])->name('frontHome');
+// });
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/', [FrontendController::class, 'index'])->name('frontHome');
