@@ -19,7 +19,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'seeker',
-            'foto' => 'andi_wijaya.jpg',
+            'foto' => 'images/users/andi_wijaya.jpg',
             'nohp' => '081234567890',
             'poin' => 150
             ]);
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'user',
-            'foto' => 'budi_santoso.jpg',
+            'foto' => 'images/users/budi_santoso.jpg',
             'nohp' => '082345678901',
             'poin' => 300
             ]);
@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'user',
-            'foto' => 'cinta_ayu.jpg',
+            'foto' => 'images/users/cinta_ayu.jpg',
             'nohp' => '083456789012',
             'poin' => 80
             ]);
@@ -52,7 +52,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'seeker',
-            'foto' => 'dwi_utami.jpg',
+            'foto' => 'images/users/dwi_utami.jpg',
             'nohp' => '084567890123',
             'poin' => 250
             ]);
@@ -63,7 +63,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'user',
-            'foto' => 'eka_putra.jpg',
+            'foto' => 'images/users/eka_putra.jpg',
             'nohp' => '085678901234',
             'poin' => 90
             ]);
@@ -74,7 +74,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'user',
-            'foto' => 'fajar_pratama.jpg',
+            'foto' => 'images/users/fajar_pratama.jpg',
             'nohp' => '086789012345',
             'poin' => 400
             ]);
@@ -85,7 +85,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'seeker',
-            'foto' => 'gita_dewi.jpg',
+            'foto' => 'images/users/gita_dewi.jpg',
             'nohp' => '087890123456',
             'poin' => 180
             ]);
@@ -96,7 +96,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'premium',
             'user_status' => 'user',
-            'foto' => 'hana_sari.jpg',
+            'foto' => 'images/users/hana_sari.jpg',
             'nohp' => '088901234567',
             'poin' => 230
             ]);
@@ -107,7 +107,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
-        'foto' => 'indra_kusuma.jpg',
+        'foto' => 'images/users/indra_kusuma.jpg',
         'nohp' => '089012345678',
         'poin' => 120
             ]);
@@ -118,7 +118,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
-        'foto' => 'joko_hartono.jpg',
+        'foto' => 'images/users/joko_hartono.jpg',
         'nohp' => '081234567891',
         'poin' => 350
             ]);
@@ -129,7 +129,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
-        'foto' => 'kurnia_wati.jpg',
+        'foto' => 'images/users/kurnia_wati.jpg',
         'nohp' => '082345678902',
         'poin' => 100
             ]);
@@ -140,7 +140,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
-        'foto' => 'lestari_putri.jpg',
+        'foto' => 'images/users/lestari_putri.jpg',
         'nohp' => '083456789013',
         'poin' => 200
             ]);
@@ -151,7 +151,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
-        'foto' => 'mulyono_susanto.jpg',
+        'foto' => 'images/users/mulyono_susanto.jpg',
         'nohp' => '084567890124',
         'poin' => 170
             ]);
@@ -162,7 +162,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'user',
-        'foto' => 'nia_rahmawati.jpg',
+        'foto' => 'images/users/nia_rahmawati.jpg',
         'nohp' => '085678901235',
         'poin' => 290
             ]);
@@ -173,7 +173,7 @@ class UserSeeder extends Seeder
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
             'plan_status' => 'free',
             'user_status' => 'seeker',
-            'foto' => 'oka_prasetya.jpg',
+            'foto' => 'images/users/oka_prasetya.jpg',
             'nohp' => '086789012346',
             'poin' => 110
             ]);
@@ -184,7 +184,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'user',
-        'foto' => 'putri_aisyah.jpg',
+        'foto' => 'images/users/putri_aisyah.jpg',
         'nohp' => '087890123457',
         'poin' => 260
             ]);
@@ -195,7 +195,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
-        'foto' => 'rizki_permana.jpg',
+        'foto' => 'images/users/rizki_permana.jpg',
         'nohp' => '088901234568',
         'poin' => 140
             ]);
@@ -206,7 +206,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
-        'foto' => 'siti_nurhaliza.jpg',
+        'foto' => 'images/users/siti_nurhaliza.jpg',
         'nohp' => '089012345679',
         'poin' => 210
             ]);
@@ -217,7 +217,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'free',
         'user_status' => 'user',
-        'foto' => 'teguh_purnomo.jpg',
+        'foto' => 'images/users/teguh_purnomo.jpg',
         'nohp' => '081234567892',
         'poin' => 130
             ]);
@@ -228,7 +228,7 @@ class UserSeeder extends Seeder
         'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
         'plan_status' => 'premium',
         'user_status' => 'seeker',
-        'foto' => 'umi_kalsum.jpg',
+        'foto' => 'images/users/umi_kalsum.jpg',
         'nohp' => '082345678903',
         'poin' => 310
             ]);
