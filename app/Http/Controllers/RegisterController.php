@@ -20,7 +20,7 @@ class RegisterController extends Controller
         $user->password = Hash::make($request->password);
         $user->plan_status = 'free';
         $user->user_status = 'user';
-        $user->foto = '';
+        $user->foto = 'images/avatar.png';
         $user->poin = '0';
         $user->save();
         return redirect('/login');
