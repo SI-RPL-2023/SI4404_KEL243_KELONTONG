@@ -12,13 +12,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
+  <!-- Icon -->
+  <script src="https://kit.fontawesome.com/85206701c2.js" crossorigin="anonymous"></script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css">
   <style>
     .container-custom {
-      height: 407px;
+      height: 800px;
       background-color: #CD8C3F;
     }
 
@@ -40,7 +43,7 @@
     }
 
     .submit-button {
-      background-color: #CD8C3F;
+      background-color: #442100;
       color: #FFFFFF;
       margin-top: 20px;
     }
@@ -72,7 +75,7 @@
       <button type="submit" class="btn btn-primary submit-button">Submit</button>
       <button type="button" class="btn btn-secondary mt-3">Logout</button>
     </div>
-      
+    <i class="fa-solid fa-arrow-left fa-lg mt-5 mx-4"></i>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
   <!-- Bootstrap Script -->
