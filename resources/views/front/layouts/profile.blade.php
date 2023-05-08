@@ -50,7 +50,7 @@
   <div class="container-fluid container-custom">
     <div class="profile-container">
       <h2>Profile</h2>
-      <img src="profile.png" alt="img" class="rounded-circle mt-3" style="width: 150px; height: 150px;">
+      <img src="images/avatar.png" alt="img" class="rounded-circle mt-3" style="width: 170px; height: 170px;">
       <form>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
