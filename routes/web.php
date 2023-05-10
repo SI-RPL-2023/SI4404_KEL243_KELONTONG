@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\OnboardingController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -31,7 +32,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::match(['get', 'delete'],'/logout', [LogoutController::class, 'destroy'])->name('logout');
-    Route::get('/', [HomeController::class, 'index'])->name('frontHome');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('frontProfile');
     Route::put('/profile', [ProfileController::class, 'update'])->name('frontEditProfile');
 });

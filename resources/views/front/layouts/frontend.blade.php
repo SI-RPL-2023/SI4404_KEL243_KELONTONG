@@ -26,7 +26,7 @@
   
   <body>
     <!-- Navbar -->
-    @include('frontHome.includes.navbar')
+    @include('front.includes.navbar')
 
     <!-- Front Home -->
     <div class="home mb-5">
@@ -44,7 +44,7 @@
     
 
     <!-- Carousel -->
-    @include('frontHome.includes.carousel')
+    @include('front.includes.carousel')
 
     <!-- Content -->
     <div class="container">
@@ -53,10 +53,10 @@
     </div>
 
     <!-- Footer -->
-    @include('frontHome.includes.footer')
+    @include('front.includes.footer')
 
     <!-- Js $ Bootstrap -->
-    @include('frontHome.includes.js')
+    @include('front.includes.js')
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>

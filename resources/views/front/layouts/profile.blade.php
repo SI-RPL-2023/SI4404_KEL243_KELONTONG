@@ -65,25 +65,25 @@
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" value="{{$user['email']}}" required>
+          <input type="email" class="form-control" id="email" name="email" value="{{$user['email']}}">
         </div>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="name" class="form-control" id="name" name="name" value="{{$user['name']}}" required>
+          <input type="name" class="form-control" id="name" name="name" value="{{$user['name']}}">
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label">Phone</label>
-          <input type="phone" class="form-control" id="phone" name="phone" value="{{$user['nohp']}}" required>
+          <input type="phone" class="form-control" id="phone" name="phone" value="{{$user['nohp']}}">
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" password="password" required>
+          <input type="password" class="form-control" id="password" password="password">
         </div>
+        <button type="submit" class="btn btn-primary submit-button">Update</button>
+        <a href="{{ route('logout') }}"><button type="button" class="btn btn-secondary mt-3">Logout</button></a>
       </form>
-      <button type="submit" class="btn btn-primary submit-button">Update</button>
-      <button type="button" class="btn btn-secondary mt-3">Logout</button>
     </div>
-    <a href="{{ route('frontHome') }}">
+    <a href="{{ route('home') }}">
       <i class="fa-solid fa-arrow-left fa-lg mt-5 mx-4"></i>
     </a>    
   </div>

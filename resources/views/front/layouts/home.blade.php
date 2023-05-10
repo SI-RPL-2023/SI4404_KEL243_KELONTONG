@@ -1,4 +1,4 @@
-@extends('frontHome.layouts.frontend')
+@extends('front.layouts.frontend')
 
 @section('content')
 <!-- About Us -->
@@ -12,12 +12,11 @@
     @foreach ($warungs as $warung)
     <div class="col-md-4 mt-5 mb-5">
         <div class="card">
-            <img src="images/warungs/{{$warung['foto']}}.png" class="card-img-top" alt="...">
+            <img src="{{$warung['foto']}}" class="card-img-top" alt="...">
             <div class="card-body">
                 <h5 class="card-title">{{$warung['nama_wrg']}}</h5>
                 <p class="card-text">{{$warung['pemilik']}}</p>
             </div>
-            <form action="{{route('login')}}" method="get">
             <div class="mb-5 d-flex justify-content-around">
                 <button class="btn btn-dark">Detail Toko</button>
             </div>

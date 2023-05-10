@@ -9,6 +9,6 @@ class OnboardingController extends Controller
 {
     public function index(){
         $warungs = Warung::where('verif_status', '=', 'verified')->take(6)->get();
-        return view ('front.home', ['warungs' => $warungs]);
+        return view ('front.onboarding', ['warungs' => $warungs]);
     }
 }

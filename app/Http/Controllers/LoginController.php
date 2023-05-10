@@ -20,7 +20,7 @@ class LoginController extends Controller
         ];
 
         if (Auth::attempt($credentials)) {
-            return redirect('/home')->with('success', 'Login berhasil');
+            return redirect('/')->with('success', 'Login berhasil');
         }
         return back()->with('error', 'Email or Password salah');
     }

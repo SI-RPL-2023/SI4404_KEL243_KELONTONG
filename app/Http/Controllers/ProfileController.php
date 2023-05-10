@@ -14,7 +14,7 @@ class ProfileController extends Controller
         return view ('front.layouts.profile', ['user' => $user]);
     }
 
-    public function update(Request $request, $id) {
+    public function update(Request $request) {
         $userId = Auth::id();
         $user = User::findOrFail($userId);
         $user->name = $request->name;
@@ -23,7 +23,7 @@ class ProfileController extends Controller
         $user->password = Hash::make($request->password);
         if ($image = $request->file('inputImage')) {
             $destinationPath = 'images/users/';
-            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $profileImage = "images/users/" . date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
             $input['image'] = "$profileImage";
             $user->foto = $input['image'];
