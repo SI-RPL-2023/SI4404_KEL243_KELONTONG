@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Auth::routes();
 
 Route::group(['middleware' => 'guest'], function () {
@@ -26,3 +23,7 @@ Route::group(['middleware' => 'guest'], function () {
     Route::post('/register',[RegisterController::class, 'store'])->name('register');
 });
 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('frontProfile');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('frontEditProfile');
+});
