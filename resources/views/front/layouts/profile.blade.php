@@ -83,7 +83,9 @@
       <button type="submit" class="btn btn-primary submit-button">Update</button>
       <button type="button" class="btn btn-secondary mt-3">Logout</button>
     </div>
-    <i class="fa-solid fa-arrow-left fa-lg mt-5 mx-4"></i>
+    <a href="{{ route('frontHome') }}">
+      <i class="fa-solid fa-arrow-left fa-lg mt-5 mx-4"></i>
+    </a>    
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
   <!-- Bootstrap Script -->
