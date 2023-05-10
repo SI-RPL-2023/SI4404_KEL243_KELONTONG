@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('warungs', function (Blueprint $table) {
             $table->id();
             $table->string('nama_wrg');
+            $table->string('pemilik');
             $table->string('verif_status')->default('pending');
+            $table->string('foto');
             $table->string('nohp');
             $table->string('kategori');
             $table->string('lokasi');
