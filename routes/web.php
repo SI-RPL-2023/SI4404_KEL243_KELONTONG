@@ -20,4 +20,11 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/', [ProfileController::class, 'index']);
+// Route::group(['middleware' => 'auth'], function () {
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('frontHome');
+// });
+
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('frontProfile');
+    Route::put('/profile', [ProfileController::class, 'update'])->name('frontEditProfile');
+}); 

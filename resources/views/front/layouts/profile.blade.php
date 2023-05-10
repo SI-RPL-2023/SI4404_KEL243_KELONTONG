@@ -53,26 +53,34 @@
   <div class="container-fluid container-custom">
     <div class="profile-container">
       <h2>Profile</h2>
-      <img src="images/avatar.png" alt="img" class="rounded-circle mt-3" style="width: 170px; height: 170px;">
-      <form>
+      <form action="" method="POST" enctype="multipart/form-data">
+        @csrf
+        @method('put')
+        <div class="mb-3 text-center">
+          <img src="{{$user['foto']}}" alt="img" class="rounded-circle mt-3" style="width: 170px; height: 170px;">
+        </div>
+        <div class="mb-3">
+          <label for="file" class="form-label">Change Photo Profile</label>
+          <input type="file" class="form-control" name="inputImage" id="file">
+        </div>
         <div class="mb-3">
           <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="email" required>
+          <input type="email" class="form-control" id="email" name="email" value="{{$user['email']}}" required>
         </div>
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="name" class="form-control" id="name" name="name" required>
+          <input type="name" class="form-control" id="name" name="name" value="{{$user['name']}}" required>
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label">Phone</label>
-          <input type="phone" class="form-control" id="phone" phone="phone" required>
+          <input type="phone" class="form-control" id="phone" phone="phone" value="{{$user['phone']}}" required>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
           <input type="password" class="form-control" id="password" password="password" required>
         </div>
       </form>
-      <button type="submit" class="btn btn-primary submit-button">Submit</button>
+      <button type="submit" class="btn btn-primary submit-button">Update</button>
       <button type="button" class="btn btn-secondary mt-3">Logout</button>
     </div>
     <i class="fa-solid fa-arrow-left fa-lg mt-5 mx-4"></i>
