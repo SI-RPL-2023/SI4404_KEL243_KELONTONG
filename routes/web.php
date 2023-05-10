@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\OnboardingController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => 'guest'], function () {
-    Route::get('/', [FrontendController::class, 'index'])->name('onboarding');
+    Route::get('/', [OnboardingController::class, 'index'])->name('onboarding');
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register',[RegisterController::class, 'store'])->name('register');
     Route::get('/login', [LoginController::class, 'create'])->name('login');
@@ -31,6 +31,7 @@ Route::group(['middleware' => 'guest'], function () {
 
 Route::group(['middleware' => 'auth'], function () {
     Route::match(['get', 'delete'],'/logout', [LogoutController::class, 'destroy'])->name('logout');
+    Route::get('/', [HomeController::class, 'index'])->name('frontHome');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('frontProfile');
     Route::put('/profile', [ProfileController::class, 'update'])->name('frontEditProfile');
 });
