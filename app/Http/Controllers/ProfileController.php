@@ -19,7 +19,7 @@ class ProfileController extends Controller
         $user = User::findOrFail($userId);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->phone = $request->phone;
+        $user->nohp = $request->phone;
         $user->password = Hash::make($request->password);
         if ($image = $request->file('inputImage')) {
             $destinationPath = 'images/users/';

@@ -73,7 +73,7 @@
         </div>
         <div class="mb-3">
           <label for="phone" class="form-label">Phone</label>
-          <input type="phone" class="form-control" id="phone" phone="phone" value="{{$user['phone']}}" required>
+          <input type="phone" class="form-control" id="phone" name="phone" value="{{$user['nohp']}}" required>
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
