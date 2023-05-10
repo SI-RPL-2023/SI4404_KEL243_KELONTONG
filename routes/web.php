@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => 'guest'], function () {
+    Route::get('/', [FrontendController::class, 'index'])->name('onboarding');
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register',[RegisterController::class, 'store'])->name('register');
     Route::get('/login', [LoginController::class, 'create'])->name('login');
