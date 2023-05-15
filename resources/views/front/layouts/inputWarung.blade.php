@@ -74,7 +74,8 @@
         <p style="color: #757575">Tambahkan Data Kelontong Yang <br/>Anda Inginkan</p>
         <!-- ! Form -->
         <div class="col-15 mt-5">
-          <form action="../crud/create.php" method="POST" autocomplete='off' enctype="multipart/form-data">
+          <form action="" method="POST" enctype="multipart/form-data">
+            @csrf
             <!-- ! Nama Mobil -->
             <div class="mb-3">
                 <label for="NamaKelontong" class="form-label"><b>Nama Kelontong</b></label>
@@ -85,20 +86,30 @@
                 <label for="Pemilik" class="form-label"><b>Nama Pemilik</b></label>
                 <input type="text" class="form-control" id="Pemilik" name="Pemilik" placeholder=""/>
             </div>
+            <!-- ! No HP Pemilik -->
+            <div class="mb-3">
+              <label for="NoHp" class="form-label"><b>Nomor HP Pemilik</b></label>
+              <input type="number" class="form-control" id="NoHp" name="NoHp" placeholder=""/>
+            </div>
             <!-- ! Jam Buka -->
             <div class="mb-3">
-              <label for="JamBuka" class="form-label"><b>Jam Buka</b></label>
-              <select id="JamBuka" class="form-select">
-                <option>12 Jam</option>
-                <option>24 Jam</option>
-              </select>
+              <label for="jam_buka" class="form-label">Jam Buka</label>
+              <input type="time" name="JamBuka" id="jam_buka" class="form-control">
+            </div>
+            <!-- ! Jam Tutup -->
+            <div class="mb-3">
+              <label for="jam_tutup" class="form-label">Jam Tutup</label>
+              <input type="time" name="JamTutup" id="jam_tutup" class="form-control">
             </div>
             <!-- ! Kategori -->
             <div class="mb-3">
               <label for="Kategori" class="form-label"><b>Kategori</b></label>
-              <select id="Kategori" class="form-select">
-                <option>Sembako</option>
-                <option>Grosir</option>
+              <select id="Kategori" name="Kategori" class="form-select">
+                <option value="nasi">Nasi</option>
+                <option value="sembako">Sembako</option>
+                <option value="kopi">Kopi</option>
+                <option value="jamu">Jamu</option>
+                <option value="internet">Internet</option>
               </select>
             </div>
             <!-- ! Deskripsi -->
@@ -127,7 +138,7 @@
     
 
     <!-- Footer -->
-    <!-- @include('frontHome.includes.footer') -->
+    <!-- @include('front.includes.footer') -->
 
     <!-- Js $ Bootstrap -->
 
