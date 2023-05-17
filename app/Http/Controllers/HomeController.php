@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        $warungs = Warung::all();
+        $warungs = Warung::where('verif_status', '=', 'verified')->get();
         return view ('front.layouts.home', ['warungs' => $warungs]);
     }
 }

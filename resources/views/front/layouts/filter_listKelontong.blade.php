@@ -73,40 +73,64 @@
     <div class="container mt-4">
       <!-- Example split danger button -->
       <!-- Example single danger button -->
+      <form  action="{{ route('viewFilterListWarung') }}" method="POST">
+        @csrf
       <nav class="navbar navbar-expand-lg" style="background-color: #F9E4CC">
         <div class="container-fluid">
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <select id="select1" class="form-select">
-                  <option value="disabled">Kategori Kelontong</option>
-                  <option value="">Sembako</option>
-                  <option value="">Grosir</option>
+                <select id="select1" name="Kategori" class="form-select">
+                  <option disabled selected>Kategori Warung</option>
+                  <option value="nasi">Nasi</option>
+                  <option value="sembako">Sembako</option>
+                  <option value="kopi">Kopi</option>
+                  <option value="jamu">Jamu</option>
+                  <option value="internet">Internet</option>
                 </select>
               </li>
               <li class="nav-item">
-                <select id="select1" class="form-select mx-2">
-                  <option value="disabled">Jam Buka</option>
-                  <option value="">Sembako</option>
-                  <option value="">Grosir</option>
+                <select id="select1" name="JamBuka" class="form-select mx-2">
+                  <option disabled selected value="00:00">Jam Buka ≥</option>
+                  @for ($hour = 0; $hour <= 23; $hour++)
+                      @php
+                        $time = sprintf("%02d:00", $hour);
+                      @endphp
+                      <option value="{{ $time }}">{{ $time }}</option>
+                  @endfor
                 </select>
               </li>
               <li class="nav-item">
-                <select id="select1" class="form-select mx-3">
-                    <option value="disabled">Pilih Lokasi</option>
-                    <option value="">Sembako</option>
-                    <option value="">Grosir</option>
+                <select id="select1" name="JamTutup" class="form-select mx-2">
+                  <option disabled selected value="23:59">≤ Jam Tutup</option>
+                  @for ($hour = 0; $hour <= 23; $hour++)
+                    @php
+                      $time = sprintf("%02d:00", $hour);
+                    @endphp
+                    <option value="{{ $time }}">{{ $time }}</option>
+                  @endfor
+                </select>
+              </li>
+              <li class="nav-item">
+                <select id="select1" name="KotaLokasi" class="form-select mx-3">
+                    <option disabled selected>Pilih Lokasi</option>
+                    <option value="Kota Bandung">Kota Bandung</option>
+                    <option value="Kota Cimahi">Kota Cimahi</option>
+                    <option value="Kabupaten Bandung">Kab. Bandung</option>
+                    <option value="Kabupaten Bandung Barat">Kab. Bandung Barat</option>
+                    <option value="Kabupaten Sumedang">Kab. Sumedang</option>
                 </select>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="d-flex" role="search">
+              <input class="form-control me-2" type="search" name="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-dark" type="submit">Filter</button>
               <!-- <button type="submit" class="btn btn-dark px-4 mt-2" style="background-color: #CD8C3F;">Login</button> -->
-            </form>
+            </div>
           </div>
         </div>
       </nav>
+    </form>
 
       <!-- Card -->
       <div class="row">
@@ -129,7 +153,7 @@
     
 
     <!-- Footer -->
-    @include('frontHome.includes.footer')
+    @include('front.includes.footer')
 
     <!-- Js $ Bootstrap -->
 
