@@ -91,6 +91,22 @@
               <label for="NoHp" class="form-label"><b>Nomor HP Pemilik</b></label>
               <input type="number" class="form-control" id="NoHp" name="NoHp" placeholder=""/>
             </div>
+
+            <div class="mb-3">
+              <label for="KotaLokasi" class="form-label"><b>Kota Lokasi</b></label>
+              <select id="KotaLokasi" name="KotaLokasi" class="form-select">
+                <option value="Kota Bandung">Kota Bandung</option>
+                <option value="Kota Cimahi">Kota Cimahi</option>
+                <option value="Kabupaten Bandung">Kab. Bandung</option>
+                <option value="Kabupaten Bandung Barat">Kab. Bandung Barat</option>
+                <option value="Kabupaten Sumedang">Kab. Sumedang</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label for="Alamat" class="form-label"><b>Alamat Lengkap</b></label>
+              <input type="text" class="form-control" id="Alamat" name="Alamat" placeholder=""/>
+          </div>
             <!-- ! Jam Buka -->
             <div class="mb-3">
               <label for="jam_buka" class="form-label">Jam Buka</label>

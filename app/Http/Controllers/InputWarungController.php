@@ -32,7 +32,8 @@ class InputWarungController extends Controller
         }
         $warung->nohp = $request->NoHp;
         $warung->kategori = $request->input('Kategori');
-        $warung->lokasi = 'Bandung';
+        $warung->kota_lokasi = $request->input('KotaLokasi');
+        $warung->kota_lokasi = $request->input('Alamat');
         $warung->jam_buka = $request->input('JamBuka');
         $warung->jam_tutup = $request->input('JamTutup');
         $warung->detail = $request->Description;
