@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('foto');
             $table->string('nohp');
             $table->string('kategori');
-            $table->string('lokasi');
+            $table->string('kota_lokasi');
+            $table->string('alamat');
             $table->time('jam_buka');
             $table->time('jam_tutup');
             $table->string('detail');
