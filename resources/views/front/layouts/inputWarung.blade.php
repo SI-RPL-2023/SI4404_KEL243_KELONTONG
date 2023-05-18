@@ -20,6 +20,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet"> 
 
+    <style>
+      .center-button {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+      }
+
+      .center-button button {
+        width: 100px; /* Adjust the width as needed */
+      }
+    </style>
+
   </head>
   
   <body>
@@ -70,7 +82,7 @@
     <!-- Form Input -->
     <div class="container">
       <div class="content mt-5 mx-5">
-        <h1>Input Data Kelontong</h1>
+        <h1><b>Data Kelontong</b></h1>
         <p style="color: #757575">Tambahkan Data Kelontong Yang <br/>Anda Inginkan</p>
         <!-- ! Form -->
         <div class="col-15 mt-5">
@@ -79,17 +91,17 @@
             <!-- ! Nama Mobil -->
             <div class="mb-3">
                 <label for="NamaKelontong" class="form-label"><b>Nama Kelontong</b></label>
-                <input type="text" class="form-control" id="NamaKelontong" name="NamaKelontong" placeholder=""/>
+                <input type="text" class="form-control" id="NamaKelontong" name="NamaKelontong" placeholder="JAPRA"/>
             </div>
             <!-- ! Nama Pemilik -->
             <div class="mb-3">
                 <label for="Pemilik" class="form-label"><b>Nama Pemilik</b></label>
-                <input type="text" class="form-control" id="Pemilik" name="Pemilik" placeholder=""/>
+                <input type="text" class="form-control" id="Pemilik" name="Pemilik" placeholder="Bang Kamil"/>
             </div>
             <!-- ! No HP Pemilik -->
             <div class="mb-3">
               <label for="NoHp" class="form-label"><b>Nomor HP Pemilik</b></label>
-              <input type="number" class="form-control" id="NoHp" name="NoHp" placeholder=""/>
+              <input type="number" class="form-control" id="NoHp" name="NoHp" placeholder="081233283"/>
             </div>
 
             <div class="mb-3">
@@ -105,7 +117,7 @@
 
             <div class="mb-3">
               <label for="Alamat" class="form-label"><b>Alamat Lengkap</b></label>
-              <input type="text" class="form-control" id="Alamat" name="Alamat" placeholder=""/>
+              <input type="text" class="form-control" id="Alamat" name="Alamat" placeholder="Jl. Suka Birus A, Blok C, Bandung, Jawa Barat."/>
           </div>
             <!-- ! Jam Buka -->
             <div class="mb-3">
@@ -131,7 +143,7 @@
             <!-- ! Deskripsi -->
             <div class="mb-3">
                 <label for="Description" class="form-label"><b>Deskripsi</b></label>
-                <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Description" name="Description" placeholder=""/>
+                <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Description" name="Description" placeholder="JAPRA adalah Kelontong yang menjualkan berbagai menu mie dan bakso..."/>
             </div>
             <!-- ! Foto -->
             <div class="mb-3">
@@ -140,13 +152,9 @@
             </div>
             
             <!-- ! Button -->
-            <button 
-              type="submit" 
-              class="btn btn-dark px-4 mt-2" 
-              style="background-color: #CD8C3F;"
-            >
-              Input Data
-            </button>
+            <div class="center-button">
+              <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">Input Data</button>
+            </div>
           </form>
         </div>
       </div>
