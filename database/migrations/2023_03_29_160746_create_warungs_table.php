@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('nohp');
             $table->string('kategori');
             $table->string('lokasi');
-            $table->string('jam_buka');
+            $table->time('jam_buka');
+            $table->time('jam_tutup');
             $table->string('detail');
             $table->timestamps();
         });

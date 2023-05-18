@@ -21,7 +21,8 @@ class WarungSeeder extends Seeder
             'nohp' => '081234567890',
             'kategori' => 'nasi',
             'lokasi' => 'Bandung',
-            'jam_buka' => '08:00-21:00',
+            'jam_buka' => '08:00',
+            'jam_tutup' => '21:00',
             'detail' => 'Menyediakan berbagai macam menu nasi dengan lauk pauk yang lezat dan higienis.'
             ]);
             
@@ -33,7 +34,8 @@ class WarungSeeder extends Seeder
         'nohp' => '082112345678',
         'kategori' => 'sembako',
         'lokasi' => 'Bandung',
-        'jam_buka' => '07:00-20:00',
+        'jam_buka' => '07:00',
+        'jam_tutup' => '20:00',
         'detail' => 'Menjual kebutuhan pokok seperti beras, gula, minyak goreng, dan lain-lain.'
         ]);
         
@@ -45,7 +47,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081398765432',
         'kategori' => 'kopi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '10:00-23:00',
+        'jam_buka' => '10:00',
+        'jam_tutup' => '23:00',
         'detail' => 'Menyajikan berbagai macam kopi lokal dan internasional dengan harga terjangkau.'
         ]);
         
@@ -57,7 +60,8 @@ class WarungSeeder extends Seeder
         'nohp' => '082212345697',
         'kategori' => 'jamu',
         'lokasi' => 'Bandung',
-        'jam_buka' => '08:00-18:00',
+        'jam_buka' => '08:00',
+        'jam_tutup' => '18:00',
         'detail' => 'Menjual berbagai macam jamu tradisional untuk menjaga kesehatan dan kebugaran tubuh.'
         ]);
         
@@ -69,7 +73,8 @@ class WarungSeeder extends Seeder
         'nohp' => '085712345612',
         'kategori' => 'internet',
         'lokasi' => 'Bandung',
-        'jam_buka' => '09:00-22:00',
+        'jam_buka' => '09:00',
+        'jam_tutup' => '22:00',
         'detail' => 'Menyediakan jasa akses internet cepat dan terjangkau.'
         ]);
         
@@ -81,7 +86,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081245678123',
         'kategori' => 'nasi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '17:00-01:00',
+        'jam_buka' => '17:00',
+        'jam_tutup' => '01:00',
         'detail' => 'Menyediakan nasi goreng kambing yang lezat dengan bumbu khas.'
         ]);
         
@@ -93,7 +99,8 @@ class WarungSeeder extends Seeder
         'nohp' => '082334567823',
         'kategori' => 'sembako',
         'lokasi' => 'Bandung',
-        'jam_buka' => '07:00-20:00',
+        'jam_buka' => '07:00',
+        'jam_tutup' => '20:00',
         'detail' => 'Menjual kebutuhan pokok dengan harga terjangkau dan kualitas terjamin.'
         ]);
         
@@ -105,7 +112,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081283746592',
         'kategori' => 'kopi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '18:00-02:00',
+        'jam_buka' => '18:00',
+        'jam_tutup' => '02:00',
         'detail' => 'Menyediakan kopi dengan berbagai varian rasa yang nikmat dan hangat.'
         ]);
         
@@ -117,7 +125,8 @@ class WarungSeeder extends Seeder
         'nohp' => '085678912345',
         'kategori' => 'jamu',
         'lokasi' => 'Bandung',
-        'jam_buka' => '08:00-18:00',
+        'jam_buka' => '08:00',
+        'jam_tutup' => '18:00',
         'detail' => 'Menjual jamu tradisional yang berkhasiat untuk menjaga kesehatan dan kebugaran.'
         ]);
         
@@ -129,7 +138,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081555664422',
         'kategori' => 'internet',
         'lokasi' => 'Bandung',
-        'jam_buka' => '09:00-21:00',
+        'jam_buka' => '09:00',
+        'jam_tutup' => '21:00',
         'detail' => 'Menyediakan jasa internet dengan koneksi stabil dan harga bersahabat.'
         ]);
         
@@ -141,7 +151,8 @@ class WarungSeeder extends Seeder
         'nohp' => '082255556677',
         'kategori' => 'nasi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '08:00-22:00',
+        'jam_buka' => '08:00',
+        'jam_tutup' => '22:00',
         'detail' => 'Menyediakan nasi ayam yang lezat dengan sambal dan lalapan segar.'
         ]);
         
@@ -153,7 +164,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081234556677',
         'kategori' => 'sembako',
         'lokasi' => 'Bandung',
-        'jam_buka' => '07:00-20:00',
+        'jam_buka' => '07:00',
+        'jam_tutup' => '20:00',
         'detail' => 'Menyediakan kebutuhan pokok sehari-hari dengan harga yang kompetitif.'
         ]);
         
@@ -165,7 +177,8 @@ class WarungSeeder extends Seeder
         'nohp' => '082133445566',
         'kategori' => 'kopi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '09:00-23:00',
+        'jam_buka' => '09:00',
+        'jam_tutup' => '23:00',
         'detail' => 'Menyajikan kopi hijau yang sehat dan berkualitas untuk kesehatan tubuh.'
         ]);
         
@@ -177,7 +190,8 @@ class WarungSeeder extends Seeder
         'nohp' => '085323456789',
         'kategori' => 'jamu',
         'lokasi' => 'Bandung',
-        'jam_buka' => '08:00-18:00',
+        'jam_buka' => '08:00',
+        'jam_tutup' => '18:00',
         'detail' => 'Menjual jamu beras kencur yang segar dan berkhasiat untuk menjaga stamina dan daya tahan tubuh.'
         ]);
         
@@ -189,7 +203,8 @@ class WarungSeeder extends Seeder
         'nohp' => '085776655443',
         'kategori' => 'internet',
         'lokasi' => 'Bandung',
-        'jam_buka' => '09:00-21:00',
+        'jam_buka' => '09:00',
+        'jam_tutup' => '21:00',
         'detail' => 'Menyediakan jasa internet dengan kecepatan tinggi dan berbagai fasilitas pendukung.'
         ]);
         
@@ -201,7 +216,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081234983210',
         'kategori' => 'nasi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '06:00-20:00',
+        'jam_buka' => '06:00',
+        'jam_tutup' => '20:00',
         'detail' => 'Menyajikan nasi uduk dengan berbagai lauk pauk yang lezat dan harga terjangkau.'
         ]);
         
@@ -213,7 +229,8 @@ class WarungSeeder extends Seeder
         'nohp' => '082345672134',
         'kategori' => 'sembako',
         'lokasi' => 'Bandung',
-        'jam_buka' => '07:00-20:00',
+        'jam_buka' => '07:00',
+        'jam_tutup' => '20:00',
         'detail' => 'Menjual berbagai kebutuhan pokok dengan kualitas terbaik dan harga wajar.'
         ]);
         
@@ -225,7 +242,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081255544332',
         'kategori' => 'kopi',
         'lokasi' => 'Bandung',
-        'jam_buka' => '10:00-00:00',
+        'jam_buka' => '10:00',
+        'jam_tutup' => '01:00',
         'detail' => 'Menyajikan kopi nikmat dengan racikan bumbu khas yang menggugah selera.'
         ]);
         
@@ -237,7 +255,8 @@ class WarungSeeder extends Seeder
         'nohp' => '085634567821',
         'kategori' => 'jamu',
         'lokasi' => 'Bandung',
-        'jam_buka' => '08:00-18:00',
+        'jam_buka' => '08:00',
+        'jam_tutup' => '18:00',
         'detail' => 'Menjual jamu madu jahe yang dapat menghangatkan tubuh dan menjaga kesehatan.'
         ]);
         
@@ -249,7 +268,8 @@ class WarungSeeder extends Seeder
         'nohp' => '081455678932',
         'kategori' => 'internet',
         'lokasi' => 'Bandung',
-        'jam_buka' => '09:00-22:00',
+        'jam_buka' => '09:00',
+        'jam_tutup' => '22:00',
         'detail' => 'Menyediakan layanan internet cepat dan nyaman dengan berbagai fasilitas menarik.'
         ]);
     }
