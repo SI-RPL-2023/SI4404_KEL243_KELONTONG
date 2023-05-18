@@ -41,7 +41,7 @@
                         </div>
                         <!-- Nama -->
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nama Depan</label>
+                            <label for="name" class="form-label">Nama</label>
                             <input type="text" 
                                     class="form-control" 
                                     id="name" 

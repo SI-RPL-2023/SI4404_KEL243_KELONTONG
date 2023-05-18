@@ -21,7 +21,6 @@ class RegisterController extends Controller
         $user->plan_status = 'free';
         $user->user_status = 'user';
         $user->foto = 'images/avatar.png';
-        $user->poin = '0';
         $user->save();
         return redirect('/login');
     }

@@ -17,26 +17,29 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-1">
           <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item ms-4">
             <a class="nav-link active" aria-current="page" href="#">About Us</a>
           </li>
           <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">List Kelontong</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">Update to Seekers</a>
+            <a class="nav-link active" aria-current="page" href="{{route('viewListWarung')}}">List Kelontong</a>
           </li>
           <li class="nav-item ms-4">
             <a class="nav-link active" aria-current="page" href="#">Langganan</a>
           </li>
+          @if (Auth::user()->user_status === 'user' && Auth::user()->seeker_request_status !== 'pending' )
+          <li class="nav-item ms-4">
+            <a class="nav-link active" aria-current="page" href="{{route('viewApplySeeker')}}">Update to Seekers</a>
+          </li>
+          @endif
+          @if (Auth::user()->user_status === 'seeker')
+          <li class="nav-item ms-4">
+            <a class="nav-link active" aria-current="page" href="{{route('viewinputWarung')}}">Input Data Warung</a>
+          </li>
+          @endif
         </ul>
-        <form action={{route('login')}} method="GET" class="d-flex">
-        @csrf
-        <!-- <button class="btn btn-light fw-semibold" type="submit">Login</button> -->
-        <img src="frontend/profile/example.png" alt="Profile" class="rounded-circle" style="width: 40px;">
-        </form>
+        <a href="{{route('frontProfile')}}"> <img src="frontend/profile/example.png" alt="Profile" class="rounded-circle" style="width: 40px;"></a>
       </div>
     </div>
   </nav>

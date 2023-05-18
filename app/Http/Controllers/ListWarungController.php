@@ -13,10 +13,8 @@ class ListWarungController extends Controller
     }
 
     public function filterIndex(Request $request){
-        // Start with a base query
         $query = Warung::query();
 
-        // Apply filters
         if ($request->has('Kategori')) {
             $kategori = $request->input('Kategori');
             $query->where('kategori', '=', $kategori);
@@ -42,10 +40,7 @@ class ListWarungController extends Controller
                 $query->where('nama_wrg', 'like', "%$search%");
             });
         }
-
-        // Get filtered warungs
         $warungs = $query->get();
-        // Return the filtered warungs to the view
         return view('front.layouts.filter_listKelontong', ['warungs' => $warungs]);
     }
 }

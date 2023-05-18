@@ -22,15 +22,6 @@
           <li class="nav-item ms-4">
             <a class="nav-link active" aria-current="page" href="#">About Us</a>
           </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">List Kelontong</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">Update to Seekers</a>
-          </li>
-          <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">Langganan</a>
-          </li>
         </ul>
         <form action={{route('login')}} method="GET" class="d-flex">
         @csrf
