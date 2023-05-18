@@ -17,11 +17,15 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('plan_status')->default('free');
-            $table->string('user_status')->default('user');
             $table->string('foto')->nullable();
             $table->string('nohp')->nullable();
-            $table->biginteger('poin')->nullable();
+            $table->string('plan_status')->default('free');
+            $table->string('user_status')->default('user');
+            $table->string('seeker_request_status')->default('not requested');
+            $table->string('seeker_nik')->nullable();
+            $table->string('seeker_alamat')->nullable();
+            $table->string('seeker_alasan')->nullable();
+            $table->biginteger('seeker_poin')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

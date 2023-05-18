@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ApplySeekerController;
 use App\Http\Controllers\ListWarungController;
 use App\Http\Controllers\InputWarungController;
 use Illuminate\Support\Facades\Auth;
@@ -37,6 +38,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('frontProfile');
     Route::put('/profile', [ProfileController::class, 'update'])->name('frontEditProfile');
+    Route::get('/applyseeker', [ApplySeekerController::class, 'edit'])->name('viewApplySeeker');
+    Route::put('/applyseeker', [ApplySeekerController::class, 'update'])->name('updateApplySeeker');
     Route::get('/listwarung', [ListWarungController::class, 'index'])->name('viewListWarung');
     Route::post('/listwarung', [ListWarungController::class, 'filterIndex'])->name('viewFilterListWarung');
     Route::get('/inputwarung', [InputWarungController::class, 'create'])->name('viewinputWarung');
