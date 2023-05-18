@@ -86,16 +86,13 @@
         <p style="color: #757575">Masukkan data di bawah ini untuk menjadi seekers</p>
         <!-- ! Form -->
         <div class="col-15 mt-5">
-          <form action="../crud/create.php" method="POST" autocomplete='off' enctype="multipart/form-data">
+          <form action="" method="POST" enctype="multipart/form-data">
+            @csrf
+            @method('put')
             <!-- ! Nama Lengkap -->
             <div class="mb-3">
                 <label for="nNamaLengkap" class="form-label"><b>Nama Lengkap</b></label>
-                <input type="text" class="form-control" id="NamaLengkap" name="NamaLengkap" placeholder="Asep Nueta"/>
-            </div>
-            <!-- ! TTL -->
-            <div class="mb-3">
-                <label for="ttl" class="form-label"><b>Tempat & Tanggal Lahir</b></label>
-                <input type="text" class="form-control" id="ttl" name="ttl" placeholder="Bandung, 13 Desember 1999"/>
+                <input type="text" class="form-control" id="NamaLengkap" name="NamaLengkap" value="{{$user['name']}}" placeholder="Asep Nueta"/>
             </div>
             <!-- ! NIK -->
             <div class="mb-3">
@@ -107,10 +104,10 @@
                 <label for="alamat" class="form-label"><b>Alamat Lengkap</b></label>
                 <input type="text" class="form-control" id="alamat" name="alamat" placeholder="Jl. Suka Birus A, Blok C, Bandung, Jawa Barat."/>
             </div>
-            <!-- ! Deskripsi -->
+            <!-- ! Alasan -->
             <div class="mb-3">
-                <label for="Description" class="form-label"><b>Deskripsi</b></label>
-                <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Description" name="Description" placeholder="Alasan saya ingin menjadi seekers karena...."/>
+                <label for="Alasan" class="form-label"><b>Alasan</b></label>
+                <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Alasan" name="Alasan" placeholder="Alasan saya ingin menjadi seekers karena...."/>
             </div>
             <!-- ! Foto Wajah -->
             <div class="mb-3 ">
@@ -129,7 +126,7 @@
     
 
     <!-- Footer -->
-    <!-- @include('frontHome.includes.footer') -->
+    <!-- @include('front.includes.footer') -->
 
     <!-- Js $ Bootstrap -->
 
