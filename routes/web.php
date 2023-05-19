@@ -9,6 +9,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ApplySeekerController;
 use App\Http\Controllers\ListWarungController;
 use App\Http\Controllers\InputWarungController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -44,4 +45,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/listwarung', [ListWarungController::class, 'filterIndex'])->name('viewFilterListWarung');
     Route::get('/inputwarung', [InputWarungController::class, 'create'])->name('viewinputWarung');
     Route::post('/inputwarung', [InputWarungController::class, 'store'])->name('inputWarung');
+    Route::get('/admin', [AdminController::class, 'edit'])->name('viewAdmin');
+    Route::put('/admin/warung/{id}', [AdminController::class, 'updateWarung'])->name('updateWarung');
+    Route::put('/admin/user/{id}', [AdminController::class, 'updateUser'])->name('updateUser');
 });
