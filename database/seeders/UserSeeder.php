@@ -14,6 +14,15 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::insert([
+            'name' => 'Admin',
+            'email' => 'admin@kelontong.com',
+            'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
+            'plan_status' => 'premium',
+            'user_status' => 'admin',
+            'foto' => 'images/avatar.png',
+            'nohp' => '081234567890',
+            ]);
+        User::insert([
             'name' => 'Andi Wijaya',
             'email' => 'andi.wijaya@gmail.com',
             'password' => '$2a$10$XtKOA0nH8tD17Uwr2sQ9OedmptvOx0QoqfkkK7VX81CHvSjt83f42',
