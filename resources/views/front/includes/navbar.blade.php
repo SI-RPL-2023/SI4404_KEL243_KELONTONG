@@ -1,6 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #CD8C3F">
   <div class="container py-2 fw-semibold">
-
     <a class="navbar-brand" href="#">
         <img src="{{ asset('frontend/logo/kelontong.png') }}" 
             width="147" height="51" alt="" loading="lazy"
@@ -27,7 +26,7 @@
         </li>
         @if (Auth::user()->plan_status === 'free')
         <li class="nav-item ms-4">
-          <a class="nav-link active" aria-current="page" href="">Langganan</a>
+          <a class="nav-link active" aria-current="page" href="{{route('subscribe')}}">Langganan</a>
         </li>
         @endif
         @if (Auth::user()->user_status === 'user' && Auth::user()->seeker_request_status !== 'pending' )
