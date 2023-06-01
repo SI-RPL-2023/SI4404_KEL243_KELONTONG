@@ -2,7 +2,7 @@
     <div class="container py-2 fw-semibold">
       
       <a class="navbar-brand" href="#">
-          <img src="frontend/logo/kelontong.png" 
+          <img src="{{ asset('frontend/logo/kelontong.png') }}" 
               width="147" height="51" alt="" loading="lazy"
           >
       </a>
@@ -39,7 +39,7 @@
           </li>
           @endif
         </ul>
-        <a href="{{route('frontProfile')}}"> <img src="frontend/profile/example.png" alt="Profile" class="rounded-circle" style="width: 40px;"></a>
+        <a href="{{route('frontProfile')}}"> <img src="{{ asset('frontend/profile/example.png') }}" alt="Profile" class="rounded-circle" style="width: 40px;"></a>
       </div>
     </div>
   </nav>
