@@ -27,7 +27,7 @@
         </li>
         @if (Auth::user()->plan_status === 'free')
         <li class="nav-item ms-4">
-          <a class="nav-link active" aria-current="page" href="">Langganan</a>
+          <a class="nav-link active" aria-current="page" href="{{route('subscribe')}}">Langganan</a>
         </li>
         @endif
         @if (Auth::user()->user_status === 'user' && Auth::user()->seeker_request_status !== 'pending' )

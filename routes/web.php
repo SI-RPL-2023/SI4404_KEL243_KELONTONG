@@ -11,6 +11,7 @@ use App\Http\Controllers\ListWarungController;
 use App\Http\Controllers\InputWarungController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -44,11 +45,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/applyseeker', [ApplySeekerController::class, 'update'])->name('updateApplySeeker');
     Route::get('/listwarung', [ListWarungController::class, 'index'])->name('viewListWarung');
     Route::post('/listwarung', [ListWarungController::class, 'filterIndex'])->name('viewFilterListWarung');
+    Route::get('/listwarung/{id}', [ListWarungController::class, 'show'])->name('viewDetailWarung');
     Route::get('/inputwarung', [InputWarungController::class, 'create'])->name('viewinputWarung');
     Route::post('/inputwarung', [InputWarungController::class, 'store'])->name('inputWarung');
     Route::get('/admin', [AdminController::class, 'edit'])->name('viewAdmin');
     Route::put('/admin/warung/{id}', [AdminController::class, 'updateWarung'])->name('updateWarung');
     Route::put('/admin/user/{id}', [AdminController::class, 'updateUser'])->name('updateUser');
-    Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
-    Route::post('/payment', [PaymentController::class, 'update'])->name('updatePayment');
+    Route::get('/subscribe', [SubscribeController::class, 'index'])->name('subscribe');
+    Route::get('/payment', [PaymentController::class, 'edit'])->name('payment');
+    Route::put('/payment', [PaymentController::class, 'update'])->name('updatePayment');
+    
 });
