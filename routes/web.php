@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('/applyseeker', [ApplySeekerController::class, 'update'])->name('updateApplySeeker');
     Route::get('/listwarung', [ListWarungController::class, 'index'])->name('viewListWarung');
     Route::post('/listwarung', [ListWarungController::class, 'filterIndex'])->name('viewFilterListWarung');
+    Route::get('/listwarung/{id}', [ListWarungController::class, 'show'])->name('viewDetailWarung');
     Route::get('/inputwarung', [InputWarungController::class, 'create'])->name('viewinputWarung');
     Route::post('/inputwarung', [InputWarungController::class, 'store'])->name('inputWarung');
     Route::get('/admin', [AdminController::class, 'edit'])->name('viewAdmin');
