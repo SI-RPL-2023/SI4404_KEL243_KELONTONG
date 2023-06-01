@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Warung;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ListWarungController extends Controller
 {
@@ -68,5 +69,4 @@ class ListWarungController extends Controller
             return redirect()->route('/');
         }
     }
-
 }
