@@ -10,6 +10,7 @@ use App\Http\Controllers\ApplySeekerController;
 use App\Http\Controllers\ListWarungController;
 use App\Http\Controllers\InputWarungController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -48,4 +49,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/admin', [AdminController::class, 'edit'])->name('viewAdmin');
     Route::put('/admin/warung/{id}', [AdminController::class, 'updateWarung'])->name('updateWarung');
     Route::put('/admin/user/{id}', [AdminController::class, 'updateUser'])->name('updateUser');
+    Route::get('/subscribe', [SubscribeController::class, 'index'])->name('subscribe');
 });
