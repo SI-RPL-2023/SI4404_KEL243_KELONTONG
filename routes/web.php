@@ -10,6 +10,7 @@ use App\Http\Controllers\ApplySeekerController;
 use App\Http\Controllers\ListWarungController;
 use App\Http\Controllers\InputWarungController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PointController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\SubscribeController;
 use Illuminate\Support\Facades\Auth;
@@ -54,5 +55,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/subscribe', [SubscribeController::class, 'index'])->name('subscribe');
     Route::get('/payment', [PaymentController::class, 'edit'])->name('payment');
     Route::put('/payment', [PaymentController::class, 'update'])->name('updatePayment');
-    
+    Route::get('/point', [PointController::class, 'edit'])->name('point');
+    Route::put('/point', [PointController::class, 'update'])->name('updatePoint');
 });

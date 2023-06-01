@@ -1,6 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #CD8C3F">
   <div class="container py-2 fw-semibold">
-    
     <a class="navbar-brand" href="#">
         <img src="{{ asset('frontend/logo/kelontong.png') }}" 
             width="147" height="51" alt="" loading="lazy"
