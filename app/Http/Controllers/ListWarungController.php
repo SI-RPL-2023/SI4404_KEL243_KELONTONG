@@ -44,7 +44,7 @@ class ListWarungController extends Controller
         $warungs = $query->get();
         return view('front.layouts.filter_listKelontong', ['warungs' => $warungs]);
     }
-
+  
     public function show($id)
     {
         $warung = Warung::findOrFail($id);
