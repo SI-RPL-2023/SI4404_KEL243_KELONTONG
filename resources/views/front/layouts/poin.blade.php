@@ -36,58 +36,17 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #CD8C3F">
-        <div class="container py-2 fw-semibold">
-
-            <a class="navbar-brand" href="#">
-                <img src="frontend/logo/kelontong.png" width="147" height="51" alt="" loading="lazy">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-1">
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">List Kelontong</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">Update to Seekers</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">Langganan</a>
-                    </li>
-                </ul>
-                <form action={{route('login')}} method="GET" class="d-flex">
-                    @csrf
-                    <!-- <button class="btn btn-light fw-semibold" type="submit">Login</button> -->
-                    <img src="frontend/profile/example.png" alt="Profile" class="rounded-circle" style="width: 40px;">
-                </form>
-            </div>
-        </div>
-    </nav>
+    @include('front.includes.navbar')
 
     <!-- Langganan -->
     <div class="header" style="background-color: #442100;">
         <div class="container h-100">
             <div class="card-body mx-5">
                 <div class="title d-flex flex-row mb-3">
-                    <img src="profile.png" alt="Profile" class="rounded-circle mt-3" style="width: 40px;">
+                    <img src="{{ asset($user['foto']) }}" alt="Profile" class="rounded-circle mt-3" style="width: 40px;">
                     <h5 class="card-title text-white mt-4 mx-1">
-                        Bj. Achmad Dhika Al Faristy
+                        {{$user['name']}}
                     </h5>
-                </div>
-                <div class="text">
-                    <p class="card-text ms-5" style="color: #CD8C3F;">
-                        Poin yang Anda Kumpulkan
-                        <br><br><br>
-                    </p>
                 </div>
             </div>
         </div>
@@ -105,7 +64,7 @@
                     <div class="card ms-3" style="width: 10rem;">
                         <img src="coin.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <p class="card-text">No.Rek: 01231213121312</p>
+                            <p class="card-text">{{$user['nohp']}}</p>
                         </div>
                     </div>
                 </div>
@@ -113,16 +72,18 @@
             <div class="saldo">
                 <p class="fw-semibold mt-5 text-center" style="font-size: 50px; font-weight: 700; 
                    line-height: 60px">
-                    100.000
+                    Rp. {{$user['seeker_poin']}}
                 </p>
-                <img src="dana.png" alt="Profile" class="dana" style="width: 125px;">
+                <img src="{{ asset('frontend/payment/dana.png') }}" alt="Dana" class="dana" style="width: 125px;">
             </div>
 
             <!-- ! Button -->
             <div class="center-button mt-5">
-                <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">
-                    Tukar Saldo Dana
-                </button>
+                <form action="" method="POST">
+                    @csrf
+                    @method('put')                
+                    <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">Tukar Saldo Dana</button>
+                </form>
             </div>
         </div>
     </div>
