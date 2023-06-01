@@ -43,4 +43,29 @@ class ListWarungController extends Controller
         $warungs = $query->get();
         return view('front.layouts.filter_listKelontong', ['warungs' => $warungs]);
     }
+
+    public function show($id)
+    {
+        $warung = Warung::findOrFail($id);
+        if (auth()->user()->user_status == 'user') {
+            if (auth()->user()->plan_status == 'free') {
+                return view('front.layouts.dk_user', ['warung' => $warung]);
+            }
+            else if (auth()->user()->plan_status == 'premium') {
+                return view('front.layouts.dk_user_langganan', ['warung' => $warung]);
+            }
+        }else if (auth()->user()->user_status == 'seeker') {
+            if (auth()->user()->plan_status == 'free') {
+                return view('front.layouts.dk_seekers', ['warung' => $warung]);
+            }
+            else if (auth()->user()->plan_status == 'premium') {
+                return view('front.layouts.dk_seekers_langganan', ['warung' => $warung]);
+            }
+        } else if (auth()->user()->user_status == 'admin'){
+            return view('front.layouts.dk_seekers_langganan', ['warung' => $warung]);
+        }
+        else{
+            return redirect()->route('/');
+        }
+    }
 }

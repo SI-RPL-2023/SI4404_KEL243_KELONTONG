@@ -18,82 +18,45 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        .center-button {
-            display: flex;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .center-button button {
-            width: 100px;
-            /* Adjust the width as needed */
-        }
+    <style>	
+        .center-button {	
+            display: flex;	
+            justify-content: center;	
+            margin-top: 1rem;	
+        }	
+        .center-button button {	
+            width: 100px;	
+            /* Adjust the width as needed */	
+        }	
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg" style="background-color: #CD8C3F">
-        <div class="container py-2 fw-semibold">
-
-            <a class="navbar-brand" href="#">
-                <img src="frontend/logo/kelontong.png" width="147" height="51" alt="" loading="lazy">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-1">
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">List Kelontong</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">Update to Seekers</a>
-                    </li>
-                    <li class="nav-item ms-4">
-                        <a class="nav-link active" aria-current="page" href="#">Langganan</a>
-                    </li>
-                </ul>
-                <form action={{route('login')}} method="GET" class="d-flex">
-                    @csrf
-                    <!-- <button class="btn btn-light fw-semibold" type="submit">Login</button> -->
-                    <img src="frontend/profile/example.png" alt="Profile" class="rounded-circle" style="width: 40px;">
-                </form>
-            </div>
-        </div>
-    </nav>
+    @include('front.includes.navbar')
 
     <!-- Detail Kelontong -->
 
     <div class="container mt-4">
         <div class="heading">
             <p class="h1 fw-semibold text-start mt-5" style="font-size: 45px; font-weight: 700; line-height: 50px">
-                Detail Kelontong
+                Detail Warung
             </p>
         </div>
         <div class="content mt-5">
             <div class="row mb-5">
                 <div class="col-5">
                     <div>
-                        <img src="detail.png" class="card-img mx-auto rounded" alt="BMW-840i" />
+                        <img src="{{ asset($warung['foto']) }}" class="card-img mx-auto rounded" alt="BMW-840i" />
                     </div>
                 </div>
                 <!-- Form -->
                 <div class="col-7 px-5">
                     <p style="font-size: 39px; font-weight: 600; line-height: 55px">
-                        Warkop Pandhita
+                        {{$warung['nama_wrg']}}
                     </p>
                     <p style="color: #CD8C3F">
-                        Ibu Yanti
+                        {{$warung['pemilik']}}
                     </p>
                     <form action="#" method="POST" autocomplete='off' enctype="multipart/form-data">
                         <!-- ! Lokasi -->
@@ -102,8 +65,7 @@
                             <div class="card" style="max-width: 600px;">
                                 <div class="card-body">
                                     <p class="card-text">
-                                        Jl. Sukabirus No.C46, Citeureup, Kec. Dayeuhkolot,
-                                        Kabupaten Bandung, Jawa Barat.
+                                        {{$warung['alamat']}}
                                     </p>
                                 </div>
                             </div>
@@ -114,18 +76,18 @@
                             <div class="card" style="max-width: 600px;">
                                 <div class="card-body">
                                     <p class="card-text">
-                                        +62 81234567890
+                                        {{$warung['nohp']}}
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <!-- Jam Buka -->
                         <div class="mb-3">
-                            <label for="jamBuka" class="form-label"><b>Jam Buka</b></label>
+                            <label for="jamBuka" class="form-label"><b>Jam Buka - Jam Tutup</b></label>
                             <div class="card" style="max-width: 600px;">
                                 <div class="card-body">
                                     <p class="card-text">
-                                        8.00 - 00.00 WIB
+                                        {{$warung['jam_buka']}} - {{$warung['jam_tutup']}}
                                     </p>
                                 </div>
                             </div>
@@ -136,13 +98,7 @@
                             <div class="card" style="max-width: 600px;">
                                 <div class="card-body">
                                     <p class="card-text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing
-                                        elit. Velit vel odio ligula dolor bibendum diam lacus
-                                        morbi volutpat. Amet consequat tellus proin volutpat
-                                        risus nulla. Nullam molestie eu sem fames lectus metus
-                                        proin ultricies. Commodo diam pretium in sed neque,
-                                        venenatis. Nunc nisl metus tincidunt adipiscing et quis.
-                                        Mattis orci feugiat condimentum.
+                                        {{$warung['detail']}}
                                     </p>
                                 </div>
                             </div>
@@ -159,7 +115,7 @@
         <div class="card mb-5">
             <div class="card-body mx-5">
                 <div class="title d-flex flex-row mb-3">
-                    <img src="profile.png" alt="Profile" class="rounded-circle" style="width: 40px;">
+                    <img src="{{ asset('frontend/profile/example.png') }}" alt="Profile" class="rounded-circle" style="width: 40px;">
                     <h5 class="card-title mt-2 mx-1">
                         Bj. Achmad Dhika Al Faristy
                     </h5>
@@ -243,14 +199,14 @@
                         feugiat condimentum.</p>
                 </div>
             </div>
-        </div>
-        <!-- ! Komentar Input -->
-        <div class="mb-3">
-            <label for="Description" class="form-label"><b>Komentar</b></label>
-            <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Description" name="Description" placeholder="" />
-        </div>
-        <!-- ! Button -->
-        <div class="center-button">
+        </div>	
+        <!-- ! Komentar Input -->	
+        <div class="mb-3">	
+            <label for="Description" class="form-label"><b>Komentar</b></label>	
+            <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Description" name="Description" placeholder="" />	
+        </div>	
+        <!-- ! Button -->	
+        <div class="center-button">	
             <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">Submit</button>
         </div>
     </div>
