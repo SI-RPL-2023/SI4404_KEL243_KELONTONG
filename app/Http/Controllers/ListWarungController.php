@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Warung;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ListWarungController extends Controller
 {
@@ -43,6 +44,7 @@ class ListWarungController extends Controller
         $warungs = $query->get();
         return view('front.layouts.filter_listKelontong', ['warungs' => $warungs]);
     }
+  
     public function show($id)
     {
         $warung = Warung::findOrFail($id);
