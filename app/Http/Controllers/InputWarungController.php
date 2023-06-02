@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Warung;
+use App\Models\User;
 
 class InputWarungController extends Controller
 {
@@ -38,6 +39,11 @@ class InputWarungController extends Controller
         $warung->jam_tutup = $request->input('JamTutup');
         $warung->detail = $request->Description;
         $warung->save();
+
+        $userId = Auth::id();
+        $user = User::findOrFail($userId);
+        $user->seeker_poin = $user['seeker_poin'] + 5000;
+        $user->save();
         return view('front.layouts.inputwarung');   
     }
 }

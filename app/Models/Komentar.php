@@ -11,7 +11,7 @@ class Komentar extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User','id_usr','id');
+        return $this->belongsTo(User::class, 'id_usr');
     }
 
     public function warung()

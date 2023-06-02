@@ -31,6 +31,7 @@ Auth::routes();
 
 Route::group(['middleware' => 'guest'], function () {
     Route::get('/', [OnboardingController::class, 'index'])->name('onboarding');
+    Route::get('/#about', [HomeController::class, 'aboutUs'])->name('aboutUsOnboarding');
     Route::get('/register', [RegisterController::class, 'create'])->name('register');
     Route::post('/register',[RegisterController::class, 'store'])->name('register');
     Route::get('/login', [LoginController::class, 'create'])->name('login');
@@ -40,6 +41,7 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::match(['get', 'delete'],'/logout', [LogoutController::class, 'destroy'])->name('logout');
     Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/home#about', [HomeController::class, 'aboutUs'])->name('aboutUsHome');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('frontProfile');
     Route::put('/profile', [ProfileController::class, 'update'])->name('frontEditProfile');
     Route::get('/applyseeker', [ApplySeekerController::class, 'edit'])->name('viewApplySeeker');
@@ -47,6 +49,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/listwarung', [ListWarungController::class, 'index'])->name('viewListWarung');
     Route::post('/listwarung', [ListWarungController::class, 'filterIndex'])->name('viewFilterListWarung');
     Route::get('/listwarung/{id}', [ListWarungController::class, 'show'])->name('viewDetailWarung');
+    Route::post('/listwarung/{id}/addkomentar', [ListWarungController::class, 'addKomentar'])->name('addKomentar');
     Route::get('/inputwarung', [InputWarungController::class, 'create'])->name('viewinputWarung');
     Route::post('/inputwarung', [InputWarungController::class, 'store'])->name('inputWarung');
     Route::get('/admin', [AdminController::class, 'edit'])->name('viewAdmin');

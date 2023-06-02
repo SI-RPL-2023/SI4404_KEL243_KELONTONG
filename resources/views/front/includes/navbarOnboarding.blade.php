@@ -17,11 +17,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-1">
           <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('onboarding')}}">Home</a>
           </li>
+          @if (request()->fullUrl() == route('home'))
+        <li class="nav-item ms-4">
+          <a class="nav-link active" aria-current="page" href="#about">About Us</a>
+        </li>
+        @else 
           <li class="nav-item ms-4">
-            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+            <a class="nav-link active" aria-current="page" href="{{route('aboutUsOnboarding')}}">About Us</a>
           </li>
+        @endif
         </ul>
         <form action={{route('login')}} method="GET" class="d-flex">
         @csrf

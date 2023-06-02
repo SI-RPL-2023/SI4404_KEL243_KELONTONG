@@ -110,7 +110,8 @@
             <!-- ! Button -->
             <div class="center-button mt-5">
                 <form action="" method="POST">
-                    @csrf                
+                    @csrf              
+                    @method('put')  
                     <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">Sudah Bayar</button>
                 </form>
             </div>

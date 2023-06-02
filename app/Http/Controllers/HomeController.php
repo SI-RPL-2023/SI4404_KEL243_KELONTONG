@@ -14,4 +14,8 @@ class HomeController extends Controller
         $warungs = Warung::where('verif_status', '=', 'verified')->get();
         return view ('front.layouts.home', ['warungs' => $warungs]);
     }}
+
+    public function aboutUs(){
+        return view();
+    }
 }

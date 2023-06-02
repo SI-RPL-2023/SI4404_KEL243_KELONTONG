@@ -112,103 +112,31 @@
                 Komentar
             </p>
         </div>
+        @foreach($komentars as $komentar)
         <div class="card mb-5">
             <div class="card-body mx-5">
-                <div class="title d-flex flex-row mb-3">
-                    <img src="{{ asset('frontend/profile/example.png') }}" alt="Profile" class="rounded-circle" style="width: 40px;">
-                    <h5 class="card-title mt-2 mx-1">
-                        Bj. Achmad Dhika Al Faristy
-                    </h5>
-                </div>
-                <div class="text">
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet,consectetur
-                        adipiscing elit. Velit vel odio ligula
-                        dolor bibendum diam lacus morbi volutpat.
-                        Amet consequat tellus proin volutpat risus
-                        nulla. Nullam molestie eu sem fames lectus
-                        metus proin ultricies. Commodo diam pretium
-                        in sed neque, venenatis. Nunc nisl metus
-                        tincidunt adipiscing et quis. Mattis orci
-                        feugiat condimentum.</p>
-                </div>
+            <div class="title d-flex flex-row mb-3">
+                <img src="{{asset( $komentar->user->foto) }}" alt="Profile" class="rounded-circle" style="width: 40px;">
+                <h5 class="card-title mt-2 mx-1">{{ $komentar->user->name }}</h5>
+            </div>
+            <div class="text">
+                <p class="card-text">{{ $komentar->isi }}</p>
+            </div>
             </div>
         </div>
-        <div class="card mb-5">
-            <div class="card-body mx-5">
-                <div class="title d-flex flex-row mb-3">
-                    <img src="profile.png" alt="Profile" class="rounded-circle" style="width: 40px;">
-                    <h5 class="card-title mt-2 mx-1">
-                        Bj. Achmad Dhika Al Faristy
-                    </h5>
-                </div>
-                <div class="text">
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet,consectetur
-                        adipiscing elit. Velit vel odio ligula
-                        dolor bibendum diam lacus morbi volutpat.
-                        Amet consequat tellus proin volutpat risus
-                        nulla. Nullam molestie eu sem fames lectus
-                        metus proin ultricies. Commodo diam pretium
-                        in sed neque, venenatis. Nunc nisl metus
-                        tincidunt adipiscing et quis. Mattis orci
-                        feugiat condimentum.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-5">
-            <div class="card-body mx-5">
-                <div class="title d-flex flex-row mb-3">
-                    <img src="profile.png" alt="Profile" class="rounded-circle" style="width: 40px;">
-                    <h5 class="card-title mt-2 mx-1">
-                        Bj. Achmad Dhika Al Faristy
-                    </h5>
-                </div>
-                <div class="text">
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet,consectetur
-                        adipiscing elit. Velit vel odio ligula
-                        dolor bibendum diam lacus morbi volutpat.
-                        Amet consequat tellus proin volutpat risus
-                        nulla. Nullam molestie eu sem fames lectus
-                        metus proin ultricies. Commodo diam pretium
-                        in sed neque, venenatis. Nunc nisl metus
-                        tincidunt adipiscing et quis. Mattis orci
-                        feugiat condimentum.</p>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-5">
-            <div class="card-body mx-5">
-                <div class="title d-flex flex-row mb-3">
-                    <img src="profile.png" alt="Profile" class="rounded-circle" style="width: 40px;">
-                    <h5 class="card-title mt-2 mx-1">
-                        Bj. Achmad Dhika Al Faristy
-                    </h5>
-                </div>
-                <div class="text">
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet,consectetur
-                        adipiscing elit. Velit vel odio ligula
-                        dolor bibendum diam lacus morbi volutpat.
-                        Amet consequat tellus proin volutpat risus
-                        nulla. Nullam molestie eu sem fames lectus
-                        metus proin ultricies. Commodo diam pretium
-                        in sed neque, venenatis. Nunc nisl metus
-                        tincidunt adipiscing et quis. Mattis orci
-                        feugiat condimentum.</p>
-                </div>
-            </div>
-        </div>	
+        @endforeach		
+        <form action="{{route('addKomentar', ['id' => $warung['id']])}}" method="POST">
+            @csrf
         <!-- ! Komentar Input -->	
         <div class="mb-3">	
             <label for="Description" class="form-label"><b>Komentar</b></label>	
-            <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Description" name="Description" placeholder="" />	
+            <input type="text" style="height: 90px; text-align: justify; padding-bottom: 60px" class="form-control" id="Komentar" name="Komentar" placeholder="berikan komentar.." />	
         </div>	
         <!-- ! Button -->	
         <div class="center-button">	
-            <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">Submit</button>
+            <button type="submit" class="btn btn-dark mb-3" style="background-color: #CD8C3F;">Tambah Komentar</button>
         </div>
+        </form>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>

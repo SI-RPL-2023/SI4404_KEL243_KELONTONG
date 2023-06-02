@@ -102,8 +102,11 @@
                       <p class="card-text">{{$warung['pemilik']}}</p>
                   </div>
                   <div class="mb-5 d-flex justify-content-around">
-                      <button class="btn btn-dark">Detail Toko</button>
-                  </div>
+                    <form action="{{ route('viewDetailWarung', ['id' => $warung['id']]) }}" method="GET">
+                        @csrf
+                        <button type="submit" class="btn btn-dark">Detail Toko</button>
+                    </form>
+                </div>
               </form>
               </div>
           </div>

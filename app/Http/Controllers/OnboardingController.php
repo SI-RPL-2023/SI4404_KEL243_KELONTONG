@@ -11,4 +11,8 @@ class OnboardingController extends Controller
         $warungs = Warung::where('verif_status', '=', 'verified')->take(6)->get();
         return view ('front.onboarding', ['warungs' => $warungs]);
     }
+
+    public function aboutUs(){
+        return view();
+    }
 }

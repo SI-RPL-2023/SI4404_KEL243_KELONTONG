@@ -18,9 +18,15 @@
         <li class="nav-item ms-4">
           <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
         </li>
+        @if (request()->fullUrl() == route('home'))
         <li class="nav-item ms-4">
-          <a class="nav-link active" aria-current="page" href="#">About Us</a>
+          <a class="nav-link active" aria-current="page" href="#about">About Us</a>
         </li>
+        @else 
+          <li class="nav-item ms-4">
+            <a class="nav-link active" aria-current="page" href="{{route('aboutUsHome')}}">About Us</a>
+          </li>
+        @endif
         <li class="nav-item ms-4">
           <a class="nav-link active" aria-current="page" href="{{route('viewListWarung')}}">List Kelontong</a>
         </li>

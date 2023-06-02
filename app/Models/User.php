@@ -49,7 +49,7 @@ class User extends Authenticatable
 
     public function komentar()
     {
-        return $this->hasMany('App\Komentar','id_usr','id');
+        return $this->hasMany(Komentar::class, 'id_usr');
     }
 
 }

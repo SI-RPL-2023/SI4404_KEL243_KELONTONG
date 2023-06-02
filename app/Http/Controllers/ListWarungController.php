@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Warung;
+use App\Models\User;
+use App\Models\Komentar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -53,14 +55,16 @@ class ListWarungController extends Controller
                 return view('front.layouts.dk_user', ['warung' => $warung]);
             }
             else if (auth()->user()->plan_status == 'premium') {
-                return view('front.layouts.dk_user_langganan', ['warung' => $warung]);
+                $komentars =  Komentar::where('id_wrg', '=', $id)->with('user')->get();
+                return view('front.layouts.dk_user_langganan', ['warung' => $warung, 'komentars' => $komentars]);
             }
         }else if (auth()->user()->user_status == 'seeker') {
             if (auth()->user()->plan_status == 'free') {
                 return view('front.layouts.dk_seekers', ['warung' => $warung]);
             }
             else if (auth()->user()->plan_status == 'premium') {
-                return view('front.layouts.dk_seekers_langganan', ['warung' => $warung]);
+                $komentars =  Komentar::where('id_wrg', '=', $id)->with('user')->get();
+                return view('front.layouts.dk_seekers_langganan', ['warung' => $warung, 'komentars' => $komentars]);
             }
         } else if (auth()->user()->user_status == 'admin'){
             return view('front.layouts.dk_seekers_langganan', ['warung' => $warung]);
@@ -68,5 +72,15 @@ class ListWarungController extends Controller
         else{
             return redirect()->route('/');
         }
+    }
+
+    public function addKomentar($id, Request $request)
+    {
+        $komentar = new Komentar;
+        $komentar->id_wrg = $id;
+        $komentar->id_usr = Auth::id();;
+        $komentar->isi = $request->Komentar;
+        $komentar->save();
+        return redirect()->route('viewDetailWarung',  ['id' => $id]);
     }
 }

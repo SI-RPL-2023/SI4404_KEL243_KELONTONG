@@ -34,7 +34,7 @@ class UserSeeder extends Seeder
             'seeker_alasan' => 'Saya ingin menjadi seeker untuk membantu orang-orang yang membutuhkan dan memberikan kontribusi positif dalam masyarakat.',
             'foto' => 'images/users/andi_wijaya.jpg',
             'nohp' => '081234567890',
-            'seeker_poin' => 150
+            'seeker_poin' => 150000
             ]);
         
         User::insert([
@@ -74,7 +74,7 @@ class UserSeeder extends Seeder
             'seeker_alasan' => 'Saya memiliki waktu luang yang cukup dan ingin menghabiskannya dengan melakukan kegiatan sosial. Menjadi seeker adalah salah satu cara untuk berkontribusi dalam komunitas.',
             'foto' => 'images/users/dwi_utami.jpg',
             'nohp' => '084567890123',
-            'seeker_poin' => 250
+            'seeker_poin' => 250000
             ]);
         
         User::insert([
@@ -114,7 +114,7 @@ class UserSeeder extends Seeder
             'seeker_alasan' => 'Saya merasa terpanggil untuk membantu orang-orang yang kurang beruntung. Sebagai seeker, saya berharap dapat membuat perbedaan dalam hidup mereka.',
             'foto' => 'images/users/gita_dewi.jpg',
             'nohp' => '087890123456',
-            'seeker_poin' => 180
+            'seeker_poin' => 180000
             ]);
 
         User::insert([
@@ -154,7 +154,7 @@ class UserSeeder extends Seeder
         'seeker_alasan' => 'Saya percaya bahwa memberikan waktu dan upaya saya untuk orang lain adalah tindakan yang bermakna. Melalui menjadi seeker, saya dapat memberikan dampak positif dalam komunitas.',
         'foto' => 'images/users/joko_hartono.jpg',
         'nohp' => '081234567891',
-        'seeker_poin' => 350
+        'seeker_poin' => 350000
             ]);
         
         User::insert([
@@ -180,7 +180,7 @@ class UserSeeder extends Seeder
         'seeker_alasan' => 'Saya ingin belajar lebih banyak tentang realitas kehidupan orang-orang yang membutuhkan. Sebagai seeker, saya dapat mengalami dan memahami perjuangan mereka secara langsung.',
         'foto' => 'images/users/lestari_putri.jpg',
         'nohp' => '083456789013',
-        'seeker_poin' => 200
+        'seeker_poin' => 200000
             ]);
         
         User::insert([
@@ -217,7 +217,7 @@ class UserSeeder extends Seeder
             'seeker_alasan' => 'Saya memiliki keinginan kuat untuk berbagi kebahagiaan dan menunjukkan empati kepada sesama. Melalui menjadi seeker, saya dapat memberikan dukungan dan keberanian kepada mereka yang membutuhkan.',          
             'foto' => 'images/users/oka_prasetya.jpg',
             'nohp' => '086789012346',
-            'seeker_poin' => 110
+            'seeker_poin' => 110000
             ]);
             
         User::insert([
@@ -254,7 +254,7 @@ class UserSeeder extends Seeder
         'seeker_alasan' => 'Saya ingin menjadi bagian dari perubahan positif dalam masyarakat. Menjadi seeker memberi saya kesempatan untuk terlibat langsung dalam mengatasi masalah sosial.',
         'foto' => 'images/users/siti_nurhaliza.jpg',
         'nohp' => '089012345679',
-        'seeker_poin' => 210
+        'seeker_poin' => 210000
             ]);
         
         User::insert([
@@ -280,7 +280,7 @@ class UserSeeder extends Seeder
         'seeker_alasan' => 'Saya percaya bahwa memberikan waktu dan usaha saya untuk membantu orang lain adalah panggilan hidup saya. Sebagai seeker, saya ingin memberikan pengaruh positif dalam kehidupan mereka yang membutuhkan bantuan.',
         'foto' => 'images/users/umi_kalsum.jpg',
         'nohp' => '082345678903',
-        'seeker_poin' => 310
+        'seeker_poin' => 310000
             ]);
         
     }
