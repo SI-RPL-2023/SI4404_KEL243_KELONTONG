@@ -62,7 +62,7 @@
             <div class="payment d-inline-flex justify-content-center">
                 <div class="col-2">
                     <div class="card ms-3" style="width: 10rem;">
-                        <img src="coin.png" class="card-img-top" alt="...">
+                        <img src="{{ asset('frontend/poin/coin.png') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text">{{$user['nohp']}}</p>
                         </div>

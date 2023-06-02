@@ -86,10 +86,12 @@
     <a href="{{ route('home') }}">
       <i class="fa-solid fa-arrow-left fa-lg mt-5 mx-4"></i>
     </a>
-    <img 
+    @if (Auth::user()->user_status === 'seeker')
+    <a href= "{{ route('point') }}"><img 
       src="{{ asset('frontend/poin/coin.png') }}" alt="rounded-img" class="rounded-circle 
       position-absolute top-2 end-0 mt-4 mx-4" style="width: 50px; height: 50px;"
-    >   
+    ></a>
+    @endif
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/js/bootstrap.min.js"></script>
   <!-- Bootstrap Script -->
