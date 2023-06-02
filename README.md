@@ -22,5 +22,6 @@ dapat meningkatkan daya saing bagi usah kecil dan menengah di sektor perdagangan
 - clone this repository
 - run `composer install`
 - copy `.env.example` to `.env`
+- run `php artisan key:generate`
 - run `php artisan migrate:refresh --seed`
 - run the project with `php artisan serve`
