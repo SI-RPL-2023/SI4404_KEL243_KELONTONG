@@ -50,24 +50,23 @@ class ListWarungController extends Controller
     public function show($id)
     {
         $warung = Warung::findOrFail($id);
+        $komentars =  Komentar::where('id_wrg', '=', $id)->with('user')->get();
         if (auth()->user()->user_status == 'user') {
             if (auth()->user()->plan_status == 'free') {
-                return view('front.layouts.dk_user', ['warung' => $warung]);
+                return view('front.layouts.dk_user', ['warung' => $warung, 'komentars' => $komentars]);
             }
             else if (auth()->user()->plan_status == 'premium') {
-                $komentars =  Komentar::where('id_wrg', '=', $id)->with('user')->get();
                 return view('front.layouts.dk_user_langganan', ['warung' => $warung, 'komentars' => $komentars]);
             }
         }else if (auth()->user()->user_status == 'seeker') {
             if (auth()->user()->plan_status == 'free') {
-                return view('front.layouts.dk_seekers', ['warung' => $warung]);
+                return view('front.layouts.dk_seekers', ['warung' => $warung, 'komentars' => $komentars]);
             }
             else if (auth()->user()->plan_status == 'premium') {
-                $komentars =  Komentar::where('id_wrg', '=', $id)->with('user')->get();
                 return view('front.layouts.dk_seekers_langganan', ['warung' => $warung, 'komentars' => $komentars]);
             }
         } else if (auth()->user()->user_status == 'admin'){
-            return view('front.layouts.dk_seekers_langganan', ['warung' => $warung]);
+            return view('front.layouts.dk_seekers_langganan', ['warung' => $warung, 'komentars' => $komentars]);
         }
         else{
             return redirect()->route('/');

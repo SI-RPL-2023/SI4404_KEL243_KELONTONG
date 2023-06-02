@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
-    public function index(){
+    public function edit(){
         $userId = Auth::id();
         $user = User::findOrFail($userId);
         if (auth()->user()->user_status == 'user') {

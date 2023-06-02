@@ -6,7 +6,7 @@
                     
                 </div>
                 <div class="col-md-4">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae porro ratione magnam optio temporibus quaerat, culpa harum, earum minima, quo alias at.
+                    Jl. Telekomunikasi. 1, Terusan Buahbatu - Bojongsoang, Telkom University, Sukapura, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40257
                 </div>
                 <div class="col-md-4">
                     @ Copyright KELONTONG 2023
